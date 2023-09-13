@@ -6,7 +6,7 @@
 			<image :src="`http://120.79.164.150${item1.img}`"></image>
 			<view class="text">{{item1.title}}</view>
 			<view class="rate">
-			<uni-rate :touchable="false" :value="5" size="10"  />
+			<uni-rate :touchable="false" color="#c7c7c7" :value="item1.rate/2" size="10"  />
 			<view class="rate1">{{item1.rate}}</view>
 			</view>
 		</view> 

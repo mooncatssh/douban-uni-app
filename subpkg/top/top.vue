@@ -29,7 +29,7 @@
         </view>
         <!-- 评分 -->
 		<view class="rate">
-			<uni-rate :touchable="false" :value="5" size="10"  />
+			<uni-rate :touchable="false" :value="item.rate/2" size="10"  />
 			<text>{{item.rate}}</text> 
 		</view>
         <!-- 导演，国家 -->

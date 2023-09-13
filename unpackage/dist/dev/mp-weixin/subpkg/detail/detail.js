@@ -187,11 +187,10 @@ var _default = {
   },
   methods: {
     rate: function rate() {
-      this.value = this.detil.rate;
+      this.value = this.detil.rate / 2;
     },
     onChange: function onChange(e) {
       this.value = JSON.stringify(e.value);
-      console.log(e);
     },
     want: function want(i) {
       uni.$showMsg(i.title + '已加入想看名单');

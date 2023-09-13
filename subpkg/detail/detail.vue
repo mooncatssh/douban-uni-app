@@ -29,8 +29,8 @@
 			</view>
 			<view class="mian_start">
 			<view class="rate">
-			<view class="main_rate">{{value}}</view>
-			<uni-rate :touchable="false" @change="onChange" :value="detil.rate" size="15"  />
+			<view class="main_rate">{{value*2}}</view>
+			<uni-rate :touchable="false" color="#c7c7c7" @change="onChange" :value="detil.rate/2" size="15"  />
 			</view>
 			<!-- 评分条 -->
 			<view class="fen">
@@ -81,11 +81,11 @@
 		},
 		methods:{
 			rate(){
-				this.value = this.detil.rate
+				this.value = this.detil.rate/2
 			},
 			onChange(e){
 				this.value = JSON.stringify(e.value)
-				console.log(e)
+				
 			},
 			want(i){
 				uni.$showMsg(i.title+'已加入想看名单')

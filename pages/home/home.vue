@@ -170,7 +170,7 @@
 			this.getMovieListx()
 		},
 		methods:{
-			...mapMutations('m_home',['getList']),
+			...mapMutations('m_home',['link','getList']),
 			// 动作
 			async getMovieListd(){
 			 	const {data: res} = await uni.$http.get('/query?name='+'动作')
@@ -250,7 +250,7 @@
 			},
 			// 电影详情
 			clickmovie(i){
-				this.getList(i)
+				this.link(i)
 				uni.navigateTo({
 					url:'../../subpkg/detail/detail'
 				})

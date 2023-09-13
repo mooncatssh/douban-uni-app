@@ -9,6 +9,27 @@
       "list": [
         {
           "name": "",
+          "pathName": "subpkg/my-search/my-search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpkg/top/top",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/list/list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "subpkg/my-login/my-login",
           "query": "",
           "launchMode": "default",

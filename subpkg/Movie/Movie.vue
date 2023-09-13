@@ -29,10 +29,10 @@
 			
 		},
 		methods:{
-			...mapMutations('m_home',['getList']),
+			...mapMutations('m_home',['link']),
 			// 电影详情
 			clickmovie(i){
-				this.getList(i)
+				this.link(i)
 				uni.navigateTo({
 					url:'../../subpkg/detail/detail'
 				})

@@ -8,8 +8,8 @@
 		<view v-show="isLogin"  @click="ismylogin" class="login_btn">登录</view>
 		
 		<view class="login" v-show="!isLogin" @click="mylogin">账号密码登录/注册</view>
-		<radio class="login_rad"  :checked="ischecked" @click="checkded"></radio>
-		<view class="footer">同意<text class="text">豆瓣使用协议</text>/<text class="text">隐私政策</text></view>
+		<radio class="login_rad" v-show="!isLogin"  :checked="ischecked" @click="checkded"></radio>
+		<view v-show="!isLogin" class="footer">同意<text class="text">豆瓣使用协议</text>/<text class="text">隐私政策</text></view>
 	</view>
 	</view>
 </template>

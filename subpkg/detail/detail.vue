@@ -3,17 +3,17 @@
 		<view class="container">
 		<!-- 头部 -->
 		<view class="container_title">
-			<image class="img" :src="`http://120.79.164.150${list.img}`"></image>
+			<image class="img" :src="`http://120.79.164.150${detil.img}`"></image>
 			<view class="container_right">
-				<view class="title">{{list.title}}({{list.year}})</view>
-				<view class="title2">{{list.types}}/{{list.countries}}</view>
+				<view class="title">{{detil.title}}({{detil.year}})</view>
+				<view class="title2">{{detil.types}}/{{detil.countries}}</view>
 				<view class="btn">
-					<view class="btn1" @click="want(list)">
+					<view class="btn1" @click="want(detil)">
 						<uni-icons v-show="islook" class="icon" color="plum"  type="heart-filled" size="17"></uni-icons>
 						<uni-icons v-show="!islook" class="icon" color="plum"  type="heart" size="17"></uni-icons>
 						<text class="btn1_text">想看</text>
 					</view>
-					<view class="btn1" @click="wont(list)">
+					<view class="btn1" @click="wont(detil)">
 						<uni-icons v-show="islooked" class="icon" color="plum" type="star-filled" size="20"></uni-icons>
 						<uni-icons v-show="!islooked" class="icon" color="plum" type="star" size="20"></uni-icons>
 						<text class="btn1_text">看过</text>
@@ -29,7 +29,7 @@
 			</view>
 			<view class="mian_start">
 			<view class="rate">
-			<view class="main_rate">{{list.rate}}</view>
+			<view class="main_rate">{{detil.rate}}</view>
 			<uni-rate :touchable="false" :value="5" size="15"  />
 			</view>
 			<!-- 评分条 -->
@@ -54,9 +54,9 @@
 		<!-- 下部 -->
 		<view class="container_footer">
 			<view class="footer_titel">简介</view>
-			<view class="keyword">{{list.keyword}}</view>
+			<view class="keyword">{{detil.keyword}}</view>
 			<view class="actor">影人</view>
-			<view class="actor_list">{{list.actor}}</view>
+			<view class="actor_list">{{detil.actor}}</view>
 		</view>
 		</view>
 	</view>
@@ -66,7 +66,7 @@
 	import {mapState} from 'vuex'
 	export default {
 		computed:{
-			...mapState('m_home',['list']),
+			...mapState('m_home',['detil']),
 		},
 		data() {
 			return {

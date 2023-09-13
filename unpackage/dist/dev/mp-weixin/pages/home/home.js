@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uniIcons: function () {
-      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 93))
+      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 105))
     },
     uniRate: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-rate/components/uni-rate/uni-rate */ "uni_modules/uni-rate/components/uni-rate/uni-rate").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-rate/components/uni-rate/uni-rate.vue */ 101))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-rate/components/uni-rate/uni-rate */ "uni_modules/uni-rate/components/uni-rate/uni-rate").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-rate/components/uni-rate/uni-rate.vue */ 113))
     },
   }
 } catch (e) {
@@ -194,7 +194,7 @@ var _default = {
     this.getMovieListm();
     this.getMovieListx();
   },
-  methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)('m_home', ['getList'])), {}, {
+  methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)('m_home', ['link', 'getList'])), {}, {
     // 动作
     getMovieListd: function getMovieListd() {
       var _this = this;
@@ -486,7 +486,7 @@ var _default = {
     },
     // 电影详情
     clickmovie: function clickmovie(i) {
-      this.getList(i);
+      this.link(i);
       uni.navigateTo({
         url: '../../subpkg/detail/detail'
       });

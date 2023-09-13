@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.dou-img {
+  width: 50px;
+  height: 50px;
+}
+.dou-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  background-color: #262626;
+  padding-top: 50px;
+}
+.dou-top .titel {
+  font-size: 25px;
+  font-style: italic;
+  color: #b3b300;
+  width: 80%;
+  text-align: center;
+  height: 50px;
+}
+.dou-top .titel2 {
+  width: 100%;
+  height: 50px;
+  font-size: 17px;
+  color: #b3b300;
+  font-style: italic;
+  text-align: center;
+}
+.contal {
+  width: 90%;
+  height: 30px;
+  display: flex;
+  padding-top: 20px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.contal .left {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.contal .left .left_text {
+  font-size: 13px;
+  color: #b5b5b5;
+}
+.contal .right {
+  width: 100px;
+  border-radius: 20px;
+  background-color: #ffff00;
+  font-size: 13px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  color: #aa55ff;
+}
+.week-box {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 120px;
+}
+.week-box .img {
+  width: 150px;
+  height: 100px;
+}
+.week-box .img image {
+  border-radius: 10px;
+  width: 110%;
+  height: 110%;
+}
+.week-box .rank-box {
+  border-radius: 2px;
+  width: 40px;
+  height: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  background-color: plum;
+}
+.week-box .box-content {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.week-box .box-content .left_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.week-box .box-content .left_box .info-box {
+  margin-left: 15px;
+  width: 150px;
+}
+.week-box .box-content .left_box .info-box .title-box {
+  font-size: 17px;
+}
+.week-box .box-content .left_box .info-box .rate {
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+}
+.week-box .box-content .left_box .info-box .rate text {
+  font-size: 10px;
+  margin-left: 10px;
+  color: #cbcbcb;
+}
+.week-box .box-content .left_box .info-box .contry {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #bcbcbc;
+}
+.week-box .box-content .left_box .looked {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid pink;
+  width: 40px;
+  height: 50%;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.week-box .box-content .left_box .looked .looked_1 {
+  color: #ffaaff;
+  font-size: 14px;
+}
+.week-box .keyword {
+  margin-top: 10px;
+  background-color: #e5e5e5;
+  height: 50px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 50px;
+  color: #aa55ff;
+  border-radius: 10px;
+}
+

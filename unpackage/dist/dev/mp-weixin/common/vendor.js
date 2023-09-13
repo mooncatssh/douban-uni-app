@@ -10926,14 +10926,21 @@ var _default = {
   state: function state() {
     return {
       // 信息列表
-      list: []
+      list: [],
+      // 详情页列表
+      detil: []
     };
   },
   mutations: {
-    // 获取信息
+    // 获取主页信息
     getList: function getList(state, list) {
       state.list = list;
       console.log(state.list);
+    },
+    // 详情页数据获取
+    link: function link(stae, detil) {
+      stae.detil = detil;
+      console.log(stae.detil);
     }
   },
   getter: {}
@@ -11506,7 +11513,19 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */
 /*!*******************************************************************************!*\
   !*** D:/前端项目/douban  app/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \*******************************************************************************/
@@ -12527,18 +12546,6 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
 /* 111 */,
 /* 112 */,
 /* 113 */,
@@ -12553,11 +12560,7 @@ exports.default = _default;
 /* 122 */,
 /* 123 */,
 /* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */
+/* 125 */
 /*!**********************************************************************************************!*\
   !*** D:/前端项目/douban  app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \**********************************************************************************************/
@@ -12572,9 +12575,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 130));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 131));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 132));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 126));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 127));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 128));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -12583,7 +12586,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 130 */
+/* 126 */
 /*!*********************************************************************************************!*\
   !*** D:/前端项目/douban  app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \*********************************************************************************************/
@@ -12593,7 +12596,7 @@ exports.default = _default;
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
 
 /***/ }),
-/* 131 */
+/* 127 */
 /*!**************************************************************************************************!*\
   !*** D:/前端项目/douban  app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \**************************************************************************************************/
@@ -12603,7 +12606,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"请输入搜索内容\"}");
 
 /***/ }),
-/* 132 */
+/* 128 */
 /*!**************************************************************************************************!*\
   !*** D:/前端项目/douban  app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \**************************************************************************************************/

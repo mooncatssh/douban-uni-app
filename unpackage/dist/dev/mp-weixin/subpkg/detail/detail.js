@@ -176,12 +176,23 @@ var _default = {
   computed: _objectSpread({}, (0, _vuex.mapState)('m_home', ['detil'])),
   data: function data() {
     return {
+      value: 0,
       // 点击想看
       islook: false,
       islooked: false
     };
   },
+  onLoad: function onLoad() {
+    this.rate();
+  },
   methods: {
+    rate: function rate() {
+      this.value = this.detil.rate;
+    },
+    onChange: function onChange(e) {
+      this.value = JSON.stringify(e.value);
+      console.log(e);
+    },
     want: function want(i) {
       uni.$showMsg(i.title + '已加入想看名单');
       this.islook = !this.islook;

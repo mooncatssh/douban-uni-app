@@ -13,7 +13,7 @@
 						<uni-icons v-show="!islook" class="icon" color="plum"  type="heart" size="17"></uni-icons>
 						<text class="btn1_text">想看</text>
 					</view>
-					<view class="btn1" @click="wont(detil)">
+					<view class="btn2" @click="wont(detil)">
 						<uni-icons v-show="islooked" class="icon" color="plum" type="star-filled" size="20"></uni-icons>
 						<uni-icons v-show="!islooked" class="icon" color="plum" type="star" size="20"></uni-icons>
 						<text class="btn1_text">看过</text>
@@ -29,8 +29,8 @@
 			</view>
 			<view class="mian_start">
 			<view class="rate">
-			<view class="main_rate">{{detil.rate}}</view>
-			<uni-rate :touchable="false" :value="5" size="15"  />
+			<view class="main_rate">{{value}}</view>
+			<uni-rate :touchable="false" @change="onChange" :value="detil.rate" size="15"  />
 			</view>
 			<!-- 评分条 -->
 			<view class="fen">
@@ -70,12 +70,23 @@
 		},
 		data() {
 			return {
+				value:0,
 				// 点击想看
 				islook:false,
 				islooked:false
 			};
 		},
+		onLoad(){
+			this.rate()
+		},
 		methods:{
+			rate(){
+				this.value = this.detil.rate
+			},
+			onChange(e){
+				this.value = JSON.stringify(e.value)
+				console.log(e)
+			},
 			want(i){
 				uni.$showMsg(i.title+'已加入想看名单')
 				this.islook = !this.islook
@@ -99,15 +110,15 @@
 		width: 100%;
 		height: 80%;
 		display: flex;
-		justify-content: space-between;
+		
 		.img{
 			border-radius: 10px;
 			width: 30%;
 			height: 80%;
 		}
 		.container_right{
+			margin-left: 20px;
 			width: 150px;
-			margin-left: 10px;
 			display: flex;
 			flex-direction: column;
 			.title{
@@ -127,8 +138,8 @@
 				align-items: center;
 				.btn1{
 					border-radius: 5px;
-					margin-left: 10px;
-					width: 100%;
+					
+					width: 100px;
 					height: 30px;
 					text-align: center;
 					line-height: 25px;
@@ -139,6 +150,21 @@
 						margin-left: 5px;
 						font-size: 15px;
 					}
+				}
+				.btn2{
+						border-radius: 5px;
+						margin-left: 10px;
+						width: 100px;
+						height: 30px;
+						text-align: center;
+						line-height: 25px;
+						background-color: #eaeaea;
+						padding-top: 5px;
+						.btn1_text{
+							color: plum;
+							margin-left: 5px;
+							font-size: 15px;
+						}
 				}
 			}
 		}

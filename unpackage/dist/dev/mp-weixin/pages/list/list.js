@@ -156,7 +156,11 @@ var _default = {
       lastMovie: [],
       fourthMovie: [],
       fifthMovie: [],
-      sixthMovie: []
+      sixthMovie: [],
+      sevenMovie: [],
+      eightMovie: [],
+      nineMovie: [],
+      tenMovie: []
     };
   },
   onLoad: function onLoad() {
@@ -166,6 +170,10 @@ var _default = {
     this.getFourthMovie();
     this.getFifthMovie();
     this.getSixthMovie();
+    this.getseventhMovie();
+    this.geteightthMovie();
+    this.getninethMovie();
+    this.gettenthMovie();
   },
   methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)('m_home', ['getList'])), {}, {
     getRecMovie: function getRecMovie() {
@@ -306,8 +314,7 @@ var _default = {
         }, _callee6);
       }))();
     },
-    //跳转top
-    top: function top() {
+    getseventhMovie: function getseventhMovie() {
       var _this7 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee7() {
         var _yield$uni$$http$get7, res;
@@ -316,15 +323,12 @@ var _default = {
             switch (_context7.prev = _context7.next) {
               case 0:
                 _context7.next = 2;
-                return uni.$http.get('/query?limit=40');
+                return uni.$http.get('/query?name=家庭&limit=3');
               case 2:
                 _yield$uni$$http$get7 = _context7.sent;
                 res = _yield$uni$$http$get7.data;
-                _this7.getList(res);
-                uni.navigateTo({
-                  url: '../../subpkg/top/top'
-                });
-              case 6:
+                _this7.sevenMovie = res;
+              case 5:
               case "end":
                 return _context7.stop();
             }
@@ -332,7 +336,7 @@ var _default = {
         }, _callee7);
       }))();
     },
-    lookmorej1: function lookmorej1() {
+    geteightthMovie: function geteightthMovie() {
       var _this8 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee8() {
         var _yield$uni$$http$get8, res;
@@ -341,15 +345,12 @@ var _default = {
             switch (_context8.prev = _context8.next) {
               case 0:
                 _context8.next = 2;
-                return uni.$http.get('/query?name=动作&limit=40');
+                return uni.$http.get('/query?name=同性&limit=3');
               case 2:
                 _yield$uni$$http$get8 = _context8.sent;
                 res = _yield$uni$$http$get8.data;
-                _this8.getList(res);
-                uni.navigateTo({
-                  url: '../../subpkg/top/top'
-                });
-              case 6:
+                _this8.eightMovie = res;
+              case 5:
               case "end":
                 return _context8.stop();
             }
@@ -357,7 +358,7 @@ var _default = {
         }, _callee8);
       }))();
     },
-    lookmorej2: function lookmorej2() {
+    getninethMovie: function getninethMovie() {
       var _this9 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee9() {
         var _yield$uni$$http$get9, res;
@@ -366,15 +367,12 @@ var _default = {
             switch (_context9.prev = _context9.next) {
               case 0:
                 _context9.next = 2;
-                return uni.$http.get('/query?name=惊悚&limit=40');
+                return uni.$http.get('/query?name=音乐&limit=3');
               case 2:
                 _yield$uni$$http$get9 = _context9.sent;
                 res = _yield$uni$$http$get9.data;
-                _this9.getList(res);
-                uni.navigateTo({
-                  url: '../../subpkg/top/top'
-                });
-              case 6:
+                _this9.nineMovie = res;
+              case 5:
               case "end":
                 return _context9.stop();
             }
@@ -382,7 +380,7 @@ var _default = {
         }, _callee9);
       }))();
     },
-    lookmorej3: function lookmorej3() {
+    gettenthMovie: function gettenthMovie() {
       var _this10 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee10() {
         var _yield$uni$$http$get10, res;
@@ -391,15 +389,12 @@ var _default = {
             switch (_context10.prev = _context10.next) {
               case 0:
                 _context10.next = 2;
-                return uni.$http.get('/query?name=喜剧&limit=40');
+                return uni.$http.get('/query?name=奇幻&limit=3');
               case 2:
                 _yield$uni$$http$get10 = _context10.sent;
                 res = _yield$uni$$http$get10.data;
-                _this10.getList(res);
-                uni.navigateTo({
-                  url: '../../subpkg/top/top'
-                });
-              case 6:
+                _this10.tenMovie = res;
+              case 5:
               case "end":
                 return _context10.stop();
             }
@@ -407,7 +402,8 @@ var _default = {
         }, _callee10);
       }))();
     },
-    lookmorej4: function lookmorej4() {
+    //跳转top
+    top: function top() {
       var _this11 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee11() {
         var _yield$uni$$http$get11, res;
@@ -416,7 +412,7 @@ var _default = {
             switch (_context11.prev = _context11.next) {
               case 0:
                 _context11.next = 2;
-                return uni.$http.get('/query?name=爱情&limit=40');
+                return uni.$http.get('/query?limit=40');
               case 2:
                 _yield$uni$$http$get11 = _context11.sent;
                 res = _yield$uni$$http$get11.data;
@@ -432,7 +428,7 @@ var _default = {
         }, _callee11);
       }))();
     },
-    lookmorej5: function lookmorej5() {
+    lookmorej1: function lookmorej1() {
       var _this12 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee12() {
         var _yield$uni$$http$get12, res;
@@ -441,7 +437,7 @@ var _default = {
             switch (_context12.prev = _context12.next) {
               case 0:
                 _context12.next = 2;
-                return uni.$http.get('/query?name=犯罪&limit=40');
+                return uni.$http.get('/query?name=动作&limit=40');
               case 2:
                 _yield$uni$$http$get12 = _context12.sent;
                 res = _yield$uni$$http$get12.data;
@@ -457,7 +453,7 @@ var _default = {
         }, _callee12);
       }))();
     },
-    lookmorej6: function lookmorej6() {
+    lookmorej2: function lookmorej2() {
       var _this13 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee13() {
         var _yield$uni$$http$get13, res;
@@ -466,7 +462,7 @@ var _default = {
             switch (_context13.prev = _context13.next) {
               case 0:
                 _context13.next = 2;
-                return uni.$http.get('/query?name=科幻&limit=40');
+                return uni.$http.get('/query?name=惊悚&limit=40');
               case 2:
                 _yield$uni$$http$get13 = _context13.sent;
                 res = _yield$uni$$http$get13.data;
@@ -480,6 +476,106 @@ var _default = {
             }
           }
         }, _callee13);
+      }))();
+    },
+    lookmorej3: function lookmorej3() {
+      var _this14 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee14() {
+        var _yield$uni$$http$get14, res;
+        return _regenerator.default.wrap(function _callee14$(_context14) {
+          while (1) {
+            switch (_context14.prev = _context14.next) {
+              case 0:
+                _context14.next = 2;
+                return uni.$http.get('/query?name=喜剧&limit=40');
+              case 2:
+                _yield$uni$$http$get14 = _context14.sent;
+                res = _yield$uni$$http$get14.data;
+                _this14.getList(res);
+                uni.navigateTo({
+                  url: '../../subpkg/top/top'
+                });
+              case 6:
+              case "end":
+                return _context14.stop();
+            }
+          }
+        }, _callee14);
+      }))();
+    },
+    lookmorej4: function lookmorej4() {
+      var _this15 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee15() {
+        var _yield$uni$$http$get15, res;
+        return _regenerator.default.wrap(function _callee15$(_context15) {
+          while (1) {
+            switch (_context15.prev = _context15.next) {
+              case 0:
+                _context15.next = 2;
+                return uni.$http.get('/query?name=爱情&limit=40');
+              case 2:
+                _yield$uni$$http$get15 = _context15.sent;
+                res = _yield$uni$$http$get15.data;
+                _this15.getList(res);
+                uni.navigateTo({
+                  url: '../../subpkg/top/top'
+                });
+              case 6:
+              case "end":
+                return _context15.stop();
+            }
+          }
+        }, _callee15);
+      }))();
+    },
+    lookmorej5: function lookmorej5() {
+      var _this16 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee16() {
+        var _yield$uni$$http$get16, res;
+        return _regenerator.default.wrap(function _callee16$(_context16) {
+          while (1) {
+            switch (_context16.prev = _context16.next) {
+              case 0:
+                _context16.next = 2;
+                return uni.$http.get('/query?name=犯罪&limit=40');
+              case 2:
+                _yield$uni$$http$get16 = _context16.sent;
+                res = _yield$uni$$http$get16.data;
+                _this16.getList(res);
+                uni.navigateTo({
+                  url: '../../subpkg/top/top'
+                });
+              case 6:
+              case "end":
+                return _context16.stop();
+            }
+          }
+        }, _callee16);
+      }))();
+    },
+    lookmorej6: function lookmorej6() {
+      var _this17 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee17() {
+        var _yield$uni$$http$get17, res;
+        return _regenerator.default.wrap(function _callee17$(_context17) {
+          while (1) {
+            switch (_context17.prev = _context17.next) {
+              case 0:
+                _context17.next = 2;
+                return uni.$http.get('/query?name=科幻&limit=40');
+              case 2:
+                _yield$uni$$http$get17 = _context17.sent;
+                res = _yield$uni$$http$get17.data;
+                _this17.getList(res);
+                uni.navigateTo({
+                  url: '../../subpkg/top/top'
+                });
+              case 6:
+              case "end":
+                return _context17.stop();
+            }
+          }
+        }, _callee17);
       }))();
     }
   })

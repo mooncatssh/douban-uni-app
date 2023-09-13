@@ -26,7 +26,7 @@
 								<image :src="`http://120.79.164.150${item1.img}`"></image>
 								<view class="text">{{item1.title}}</view>
 								<view class="rate">
-								<uni-rate :touchable="false" :value="5" size="10"  />
+								<uni-rate :touchable="false"  :value="item1.rate" size="10"  />
 								<view class="rate1">{{item1.rate}}</view>
 								</view>
 							</view>
@@ -127,11 +127,11 @@
 					<view class="movie_box2">
 						<scroll-view class="contant_box2" scroll-x="true">
 							<!-- 内容区 -->
-							<view class="movie" v-for="(item1,i1) in movielistx" :key="i1" @click="clickmovie(item1)">
+							<view class="movie" v-for="(item1,i1) in movielista" :key="i1" @click="clickmovie(item1)">
 								<image :src="`http://120.79.164.150${item1.img}`"></image>
 								<view class="text">{{item1.title}}</view>
 								<view class="rate">
-								<uni-rate :touchable="false" :value="5" size="10"  />
+								<uni-rate :touchable="false"  :value="5" size="10"  />
 								<view class="rate1">{{item1.rate}}</view>
 								</view>
 							</view>
@@ -157,7 +157,7 @@
 				movielistm:[],
 				movielistj:[],
 				movielistx:[],
-				movielistf:[],
+				movielista:[],
 				lists:[]
 				
 			};
@@ -168,6 +168,7 @@
 			this.getMovieListj()
 			this.getMovieListm()
 			this.getMovieListx()
+			this.getMovieLista()
 		},
 		methods:{
 			...mapMutations('m_home',['link','getList']),
@@ -201,9 +202,9 @@
 				this.movielistx = res
 			},
 			// 爱情
-			async getMovieListf(){
+			async getMovieLista(){
 			 	const {data: res} = await uni.$http.get('/query?name='+'爱情')
-				this.movielistf = res
+				this.movielista = res
 			},
 			// 跳转查看
 			async lookmore(){

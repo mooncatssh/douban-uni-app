@@ -39,7 +39,7 @@
 		  </view>
    <!-- 第四个电影list -->
    <view class="titel"  @click="lookmorej4">
-   <image src="../../static/EEEC6362C0C34EA01DECE3B72E6142EE.jpg"  class="top-img"></image>
+   <image src="../../static/E396051FBDDC7132E0F665EF14BE939E.png"  class="top-img"></image>
    <view class="movies">
    <view class="top-movie" v-for="(item,i) in fourthMovie" :key="i">
    {{i+1}}.{{item.title}} <text class="tab"> {{item.rate}} </text>
@@ -59,14 +59,49 @@
      <!-- 第六个电影list -->
        
       <view class="titel" @click="lookmorej6">
-      <image src="../../static/v2-cf514fe205a58362131d9916df8198f9_b.jpg"  class="top-img"></image>
+      <image src="../../static/90183F6963470D1B2A542D5413B55575.jpg"  class="top-img"></image>
       <view class="movies">
       <view class="top-movie" v-for="(item,i) in sixthMovie" :key="i" >
       {{i+1}}.{{item.title}} <text class="tab"> {{item.rate}} </text>
       </view>
       </view>
       </view>
-       
+       <!-- 7 -->
+	   <view class="titel" @click="lookmorej6">
+	   <image src="../../static/564206B552E02E3DBF3E2FA611BBDCFF.jpg"  class="top-img"></image>
+	   <view class="movies">
+	   <view class="top-movie" v-for="(item,i) in sevenMovie" :key="i" >
+	   {{i+1}}.{{item.title}} <text class="tab"> {{item.rate}} </text>
+	   </view>
+	   </view>
+	   </view>
+	   <!-- 8 -->
+	   <view class="titel" @click="lookmorej6">
+	   <image src="../../static/6286F4658C4179BF77456F01C00B84E0.jpg"  class="top-img"></image>
+	   <view class="movies">
+	   <view class="top-movie" v-for="(item,i) in eightMovie" :key="i" >
+	   {{i+1}}.{{item.title}} <text class="tab"> {{item.rate}} </text>
+	   </view>
+	   </view>
+	   </view>
+	   <!-- 9 -->
+	   <view class="titel" @click="lookmorej6">
+	   <image src="../../static/D1D9BAE0A3A57FA1DE014A57D52E9990.jpg"  class="top-img"></image>
+	   <view class="movies">
+	   <view class="top-movie" v-for="(item,i) in nineMovie" :key="i" >
+	   {{i+1}}.{{item.title}} <text class="tab"> {{item.rate}} </text>
+	   </view>
+	   </view>
+	   </view>
+	   <!-- 10 -->
+	   <view class="titel" @click="lookmorej6">
+	   <image src="../../static/E624A820181D9856AA0ED0F782385C1B.jpg"  class="top-img"></image>
+	   <view class="movies">
+	   <view class="top-movie" v-for="(item,i) in tenMovie" :key="i" >
+	   {{i+1}}.{{item.title}} <text class="tab"> {{item.rate}} </text>
+	   </view>
+	   </view>
+	   </view>
 		  </view>
 		</view>
 	</view>
@@ -82,7 +117,11 @@
         lastMovie:[],
         fourthMovie:[],
         fifthMovie:[],
-        sixthMovie:[]
+        sixthMovie:[],
+		sevenMovie:[],
+		eightMovie:[],
+		nineMovie:[],
+		tenMovie:[]
 			}
 		},
     onLoad(){
@@ -92,6 +131,10 @@
       this.getFourthMovie()
       this.getFifthMovie()
       this.getSixthMovie()
+	  this.getseventhMovie()
+	  this.geteightthMovie()
+	  this.getninethMovie()
+	  this.gettenthMovie()
          },
          methods:{
 			 ...mapMutations('m_home',['getList']),
@@ -125,6 +168,22 @@
           const{data:res}=await uni.$http.get('/query?name=科幻&limit=3')
           this.sixthMovie=res
         },
+		async  getseventhMovie(){
+		    const{data:res}=await uni.$http.get('/query?name=家庭&limit=3')
+		    this.sevenMovie=res
+		  },
+		  async  geteightthMovie(){
+		      const{data:res}=await uni.$http.get('/query?name=同性&limit=3')
+		      this.eightMovie=res
+		    },
+			async  getninethMovie(){
+			    const{data:res}=await uni.$http.get('/query?name=音乐&limit=3')
+			    this.nineMovie=res
+			  },
+			  async  gettenthMovie(){
+			      const{data:res}=await uni.$http.get('/query?name=奇幻&limit=3')
+			      this.tenMovie=res
+			    },
 		//跳转top
 		async top(){
 			const {data: res} = await uni.$http.get('/query?limit=40')
@@ -209,8 +268,8 @@
 		}
 		text{
 			margin-left: 10px;
-			font-size: 20px;
-			color: #cecece;
+			font-size: 30px;
+			color: #aa0000;
 		}
 	}
 
@@ -230,6 +289,7 @@
 		margin-right: 20px;
 		border: 1px solid #cecece;
 		width: 200px;
+		border-radius: 5px;
 		height:70px;
 		display: flex;
 		flex-direction: column;

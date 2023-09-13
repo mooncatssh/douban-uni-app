@@ -183,7 +183,7 @@ var _default = {
       movielistm: [],
       movielistj: [],
       movielistx: [],
-      movielistf: [],
+      movielista: [],
       lists: []
     };
   },
@@ -193,6 +193,7 @@ var _default = {
     this.getMovieListj();
     this.getMovieListm();
     this.getMovieListx();
+    this.getMovieLista();
   },
   methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)('m_home', ['link', 'getList'])), {}, {
     // 动作
@@ -311,7 +312,7 @@ var _default = {
       }))();
     },
     // 爱情
-    getMovieListf: function getMovieListf() {
+    getMovieLista: function getMovieLista() {
       var _this6 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee6() {
         var _yield$uni$$http$get6, res;
@@ -324,7 +325,7 @@ var _default = {
               case 2:
                 _yield$uni$$http$get6 = _context6.sent;
                 res = _yield$uni$$http$get6.data;
-                _this6.movielistf = res;
+                _this6.movielista = res;
               case 5:
               case "end":
                 return _context6.stop();

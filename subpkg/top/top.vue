@@ -146,7 +146,7 @@
   height: 100px;
   margin: 0 auto;
 margin-top: 10px;
-margin-bottom: 120px;
+margin-bottom: 140px;
 .img{
 	
 	width:150px;
@@ -159,7 +159,7 @@ margin-bottom: 120px;
 }
   .rank-box{
 	  border-radius: 2px;
-	  width: 40px;
+	  width: 50px;
 	  height: 20px;
 	  color: #ffffff;
 	  font-size: 15px;
@@ -217,11 +217,11 @@ margin-bottom: 120px;
   .keyword{
 	  margin-top: 10px;
 	  background-color: #e5e5e5;
-	  height: 50px;
+	  height: 40px;
 	  font-size: 13px;
-	  text-align: center;
-	  line-height: 50px;
+	  line-height: 40px;
 	  color: #aa55ff;
+	  padding-left: 10px;
 	  border-radius: 10px;
   }
 
